@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-<!-- META PIXEL (SAFE VERSION) -->
+<!-- META PIXEL (PERMANENT SAFE VERSION) -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;
@@ -18,7 +18,9 @@ s.parentNode.insertBefore(t,s)
 }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init','861582670073340');
-fbq('track','PageView'); // ONLY page view
+
+/* ONLY SAFE EVENTS */
+fbq('track','PageView');
 </script>
 <!-- END META PIXEL -->
 
@@ -128,6 +130,11 @@ font-weight:bold;
 margin:20px 0;
 }
 
+/* SAFE CUSTOM EVENT */
+.join a:active{
+fbq('trackCustom','TelegramJoin');
+}
+
 .features{
 display:flex;
 justify-content:space-between;
@@ -181,11 +188,11 @@ opacity:0.7;
 </div>
 </div>
 
-<!-- SAFE BUTTON CLICK EVENT -->
+<!-- SAFE BUTTON -->
 <div class="join">
 <a href="https://t.me/+kAT6yhyqa_4yYjk1"
-   target="_blank"
-   onclick="fbq('trackCustom','TelegramJoin');">
+target="_blank"
+onclick="fbq('trackCustom','TelegramJoin');">
 🚀 Join Telegram Channel
 </a>
 </div>
