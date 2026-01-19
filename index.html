@@ -1,215 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<!-- META PIXEL (PERMANENT SAFE VERSION) -->
-<script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;
-n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init','861582670073340');
-
-/* ONLY SAFE EVENTS */
-fbq('track','PageView');
-</script>
-<!-- END META PIXEL -->
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sunny Jaipur</title>
+<title>Sunny Jaipur – IPL Cricket</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-
 body{
-background:linear-gradient(180deg,#0a2a66,#07162f);
-min-height:100vh;
+margin:0;
+font-family:Arial;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
+url("https://images.unsplash.com/photo-1521412644187-c49fa049e84d");
+background-size:cover;
+background-position:center;
 display:flex;
-justify-content:center;
 align-items:center;
-color:#fff;
-}
-
-.wrapper{
-width:100%;
-max-width:420px;
-padding:20px;
-}
-
-.card{
-background:linear-gradient(180deg,#1aa6d9,#0f5fa8);
-border-radius:18px;
-padding:25px 20px;
-text-align:center;
-}
-
-.profile{
-width:110px;
-height:110px;
-border-radius:50%;
-border:4px solid #fff;
-margin:0 auto 15px;
-overflow:hidden;
-background:#000;
-}
-
-.profile img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-h1{font-size:28px;margin-bottom:8px}
-
-.badges{
-display:flex;
 justify-content:center;
-gap:10px;
-margin-bottom:12px;
+min-height:100vh;
+color:#fff
 }
 
-.badge{
-padding:6px 12px;
-border-radius:20px;
-font-size:12px;
-background:rgba(255,255,255,0.2);
+.box{
+max-width:400px;
+background:#0b3c7d;
+border-radius:18px;
+padding:25px;
+text-align:center
 }
 
-.badge.live{
-background:#1cc88a;
-color:#000;
-font-weight:bold;
-}
-
-.members{
-font-size:14px;
-margin-bottom:18px;
-opacity:0.9;
-}
-
-.stats{
-display:flex;
-gap:15px;
-margin-bottom:20px;
-}
-
-.stat{
-flex:1;
-padding:18px 10px;
-border-radius:15px;
-text-align:center;
-font-weight:bold;
-}
-
-.stat.green{background:#1cc88a;color:#000}
-.stat.orange{background:#f6a623;color:#000}
-
-.stat h2{font-size:32px}
-.stat p{font-size:12px}
-
-/* ONLY CLICKABLE BUTTON */
-.join a{
+h1{font-size:28px}
+.tag{background:#ff9800;color:#000;padding:6px 14px;border-radius:20px;font-size:13px}
+.btn{
+margin-top:22px;
 display:block;
-background:#1976ff;
-color:#fff;
 padding:16px;
-border-radius:12px;
-text-decoration:none;
+background:#ff1744;
+color:#fff;
+border-radius:14px;
 font-size:18px;
 font-weight:bold;
-margin:20px 0;
+text-decoration:none;
+animation:pulse 1.4s infinite
 }
 
-/* SAFE CUSTOM EVENT */
-.join a:active{
-fbq('trackCustom','TelegramJoin');
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(255,23,68,.7)}
+70%{box-shadow:0 0 0 14px rgba(255,23,68,0)}
+100%{box-shadow:0 0 0 0 rgba(255,23,68,0)}
 }
-
-.features{
-display:flex;
-justify-content:space-between;
-background:rgba(0,0,0,0.25);
-border-radius:14px;
-padding:15px 10px;
-margin-top:20px;
-font-size:12px;
-}
-
-.feature{
-width:25%;
-text-align:center;
-}
-
-.footer{
-text-align:center;
-font-size:11px;
-margin-top:20px;
-opacity:0.7;
-}
+small{opacity:.7}
 </style>
 </head>
 
 <body>
-
-<div class="wrapper">
-<div class="card">
-
-<div class="profile">
-<img src="logo.png" alt="Sunny Jaipur Logo">
-</div>
-
+<div class="box">
+<span class="tag">🏏 IPL Special</span>
 <h1>SUNNY JAIPUR</h1>
+<p>Cricket talks • Match vibes • IPL discussion</p>
 
-<div class="badges">
-<div class="badge">🏆 Premium Tips</div>
-<div class="badge live">🔴 Live Now</div>
-</div>
-
-<div class="members">👥 50k+ Active Members</div>
-
-<div class="stats">
-<div class="stat green">
-<h2>95%</h2>
-<p>WIN RATE</p>
-</div>
-<div class="stat orange">
-<h2>4.5 ★</h2>
-<p>RATING</p>
-</div>
-</div>
-
-<!-- SAFE BUTTON -->
-<div class="join">
-<a href="https://t.me/+kAT6yhyqa_4yYjk1"
-target="_blank"
-onclick="fbq('trackCustom','TelegramJoin');">
-🚀 SUBSCIBE My Telegram Channel
+<a class="btn" href="https://t.me/+kAT6yhyqa_4yYjk1">
+SUBSCRIBE CRICKET COMMUNITY
 </a>
-</div>
 
-<div class="features">
-<div class="feature">✅<br>Verified</div>
-<div class="feature">🔒<br>Secure</div>
-<div class="feature">📈<br>Entertainment</div>
-<div class="feature">⭐<br>Top Rated</div>
+<small>No betting • Entertainment only</small>
 </div>
-
-</div>
-
-<div class="footer">
-© 2026 Sunny Jaipur – All rights reserved.
-</div>
-</div>
-
 </body>
 </html>
