@@ -1,198 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<!-- META PIXEL CODE -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '861582670073340');
-fbq('track', 'PageView');
-</script>
-
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=861582670073340&ev=PageView&noscript=1"/>
-</noscript>
-<!-- END META PIXEL CODE -->
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sunny Jaipur</title>
+<title>Sunny Jaipur – Cricket Community</title>
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
+font-family:Poppins,Arial,sans-serif;
 }
 
 body{
 min-height:100vh;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 color:#fff;
 
-/* 🏏 CRICKET STADIUM BACKGROUND – DIRECT URL */
+/* ONLINE CRICKET STADIUM BACKGROUND */
 background:
 linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.85)),
-url("https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?auto=format&fit=crop&w=1920&q=80");
+url("https://images.unsplash.com/photo-1509027572446-af8401acfdc3?q=80&w=1920&auto=format&fit=crop");
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 }
 
-.wrapper{
+.container{
 width:100%;
 max-width:420px;
-padding:20px;
+padding:14px;
 }
 
-.card{
-background:linear-gradient(180deg,#1e88e5,#0d47a1);
-border-radius:20px;
-padding:26px 22px;
+/* ALERT */
+.alert{
+background:#f4a261;
+color:#000;
 text-align:center;
-box-shadow:0 20px 45px rgba(0,0,0,.6);
+padding:8px;
+font-weight:600;
+border-radius:8px;
+margin-bottom:14px;
 }
 
-h1{
+/* BRAND */
+.brand{
+text-align:center;
+margin-bottom:18px;
+}
+
+.brand h1{
 font-size:28px;
-margin-bottom:6px;
+font-weight:800;
 letter-spacing:1px;
 }
 
-.tag{
+.brand span{
+display:block;
+font-size:14px;
+margin-top:4px;
+}
+
+.brand .subs{
+margin-top:6px;
+font-size:13px;
+background:#000;
+padding:4px 10px;
+border-radius:20px;
 display:inline-block;
-background:#00e5ff;
+}
+
+/* WAITING */
+.waiting{
+margin:14px auto;
+width:max-content;
+background:#d0e87b;
 color:#000;
 padding:6px 14px;
 border-radius:20px;
 font-size:13px;
-font-weight:bold;
-margin-bottom:12px;
-}
-
-.desc{
-font-size:14px;
-opacity:.95;
-margin-bottom:18px;
-}
-
-.stats{
 display:flex;
-gap:14px;
-margin-bottom:20px;
+gap:8px;
+align-items:center;
 }
 
-.stat{
-flex:1;
-background:#00e5ff;
+.waiting::before{
+content:"●";
+color:red;
+}
+
+/* CARD */
+.card{
+background:#fff;
 color:#000;
-border-radius:14px;
-padding:16px 10px;
-font-weight:bold;
+border-radius:18px;
+padding:20px;
+box-shadow:0 15px 30px rgba(0,0,0,.3);
+text-align:center;
 }
 
-.stat h2{font-size:26px}
-.stat p{font-size:12px}
+.card h2{
+color:#e63946;
+margin-bottom:14px;
+}
 
+.card ul{
+text-align:left;
+font-size:14px;
+margin-bottom:16px;
+}
+
+.card ul li{
+margin-bottom:8px;
+}
+
+/* TIMER */
+.timer{
+background:#000;
+color:#fff;
+padding:12px;
+border-radius:10px;
+font-size:18px;
+letter-spacing:2px;
+margin-bottom:16px;
+}
+
+.timer span{
+color:#ffd166;
+}
+
+/* JOIN BUTTON */
 .join a{
 display:block;
-margin:22px 0;
-padding:16px;
-background:#ff1744;
+background:#18b87a;
 color:#fff;
-border-radius:14px;
+padding:18px;
 font-size:18px;
-font-weight:bold;
+font-weight:800;
+border-radius:40px;
 text-decoration:none;
 animation:pulse 1.4s infinite;
 }
 
 @keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(255,23,68,.7)}
-70%{box-shadow:0 0 0 16px rgba(255,23,68,0)}
-100%{box-shadow:0 0 0 0 rgba(255,23,68,0)}
+0%{box-shadow:0 0 0 0 rgba(24,184,122,.7)}
+70%{box-shadow:0 0 0 18px rgba(24,184,122,0)}
+100%{box-shadow:0 0 0 0 rgba(24,184,122,0)}
 }
 
-.features{
+.note{
+margin-top:10px;
+font-size:13px;
+font-weight:600;
+}
+
+/* POPUP */
+.popup{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+background:#000;
+color:#fff;
+border-radius:30px;
+padding:10px 14px;
+display:none;
+align-items:center;
+gap:10px;
+font-size:13px;
+}
+
+.popup .tick{
+background:#00c853;
+width:22px;
+height:22px;
+border-radius:50%;
 display:flex;
-justify-content:space-between;
-background:rgba(0,0,0,.35);
-border-radius:14px;
-padding:14px 8px;
-font-size:12px;
+align-items:center;
+justify-content:center;
+font-weight:bold;
 }
-
-.feature{
-width:25%;
-text-align:center;
-}
-
-.footer{
-margin-top:18px;
-font-size:11px;
-opacity:.75;
-}
+.popup span{color:#00c853;}
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+<div class="container">
+
+<div class="alert">⚠️ Cricket Community Update</div>
+
+<div class="brand">
+<h1>SUNNY JAIPUR ™</h1>
+<span>[ Cricket Tipper ]</span>
+<div class="subs">97,214 Subscribers</div>
+</div>
+
+<div class="waiting">328 people waiting for link</div>
+
 <div class="card">
+<h2>AAJ KA MATCH UPDATE 🚀</h2>
 
-<h1>SUNNY JAIPUR</h1>
-<div class="tag">🏏 Cricket Community</div>
+<ul>
+<li>✔ Open discussion milega</li>
+<li>✔ No fees • Free joining</li>
+<li>✔ Entertainment purpose only</li>
+</ul>
 
-<p class="desc">
-Cricket discussion • Match updates • IPL vibes  
-<br><strong>100% FREE JOINING</strong> • No betting
-</p>
-
-<div class="stats">
-<div class="stat">
-<h2>FREE</h2>
-<p>JOINING</p>
-</div>
-<div class="stat">
-<h2>LIVE</h2>
-<p>DISCUSSION</p>
-</div>
+<div class="timer">
+LINK EXPIRING : <span id="countdown">02:00</span>
 </div>
 
-<!-- FREE JOIN EVENT -->
 <div class="join">
-<a href="https://t.me/+kAT6yhyqa_4yYjk1"
-target="_blank"
-onclick="fbq('track','Lead',{value:0,currency:'INR'});">
-🚀 JOIN FREE TELEGRAM CHANNEL
+<a href="https://t.me/+kAT6yhyqa_4yYjk1" target="_blank">
+👉 JOIN FREE TELEGRAM CHANNEL 👈
 </a>
 </div>
 
-<div class="features">
-<div class="feature">✅<br>Free</div>
-<div class="feature">🔒<br>Safe</div>
-<div class="feature">🏏<br>Cricket</div>
-<div class="feature">⭐<br>Trusted</div>
+<div class="note">Sirf kuch hi minutes baki hai!</div>
 </div>
 
 </div>
 
-<div class="footer">
-© 2026 Sunny Jaipur – All rights reserved.
+<!-- POPUP -->
+<div class="popup" id="popup">
+<div class="tick">✓</div>
+<div><span>Rahul</span> just joined<br><small>Verified Member</small></div>
 </div>
-</div>
+
+<script>
+/* COUNTDOWN TIMER */
+let time = 120;
+const cd = document.getElementById("countdown");
+
+setInterval(()=>{
+let m = Math.floor(time/60);
+let s = time%60;
+cd.textContent = 
+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+if(time>0) time--;
+},1000);
+
+/* POPUP JOIN EFFECT */
+const names=["Rahul","Aman","Vikas","Suresh","Rohit","Ankit"];
+const popup=document.getElementById("popup");
+
+setInterval(()=>{
+popup.style.display="flex";
+popup.querySelector("span").textContent=
+names[Math.floor(Math.random()*names.length)];
+setTimeout(()=>popup.style.display="none",2500);
+},5000);
+</script>
 
 </body>
 </html>
